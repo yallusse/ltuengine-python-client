@@ -90,10 +90,13 @@ class BaseClient(object):
 
     Logs advice on actions to take as warnings in case of wrong status.
     """
-    result = self.get_application_status()
-    if result.status_code == 0:
-      return True
-    else:
+    try:
+      result = self.get_application_status()
+      if result.status_code == 0:
+        return True
+      else:
+        return False
+    except:
       return False
 
   def open_service(self, service, params={}, files=None):
