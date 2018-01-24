@@ -6,3 +6,10 @@ env*
 *.egg-info
 .vscode
 build
+out_result
+*BACKUP*
+*BASE*
+*LOCAL*
+*REMOTE*
+*.log
+*.orig
